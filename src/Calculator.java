@@ -101,7 +101,7 @@ public class Calculator implements ActionListener {
     }
 
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        new Calculator();
     }
 
     @Override
@@ -152,6 +152,12 @@ public class Calculator implements ActionListener {
                     result = num1 / num2;
                     break;
             }
+
+              /* trying to solve x.0 after action
+            BigDecimal res = BigDecimal.valueOf(result);
+            res.stripTrailingZeros();
+            textField.setText(String.valueOf(res));
+             */
             textField.setText(String.valueOf(result));
             num1 = result;
         }
